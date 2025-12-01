@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <h1>MINDFIT-Clubes</h1>
+       
+    </header>
+
+    <div class="placar-container">
+        <div class="clube clube1">
+            <img src="img/santos.jpg">
+            <h2>Santos:</h2>
+            <p>0</p> 
+        </div>
+        <div class="clube clube2">
+            <img src="img/Atlético Mineiro.jpg">
+            <h2>Atlético Mg:</h2>
+            <p>0</p> 
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main class="tabuleiro-container">
+        <!-- Mensagem de status do jogo -->
+        <section class="mensagem">
+            <p id="mensagem">Vez do Santos</p>
+        </section>
+
+        <!-- Tabuleiro do jogo -->
+        <section id="tabuleiro" class="tabuleiro">
+            <!-- As células do tabuleiro serão adicionadas dinamicamente via JavaScript -->
+        </section>
+
+        <!-- Botão para reiniciar o jogo -->
+        <footer>
+            <button id="reiniciar">Reiniciar Jogo</button>
+            <button class="blob-btn" id="toggle-mode">Modo</button>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

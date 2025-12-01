@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/Atlético\ Mineiro.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    padding: 10px; 
+}
+
+
+
+body.modo-noite{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/santos.jpg);
+  
+}
+.tabuleiro-container {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(255, 0, 0, 0.1);
+    border: 5px solid rgb(0, 0, 0);
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima para 500px */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+.placar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.659);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.placar-container.modo-noite{
+  
+    background-color: rgba(255, 255, 255, 0.659);
+    color: hsl(0, 81%, 51%);
+
+}
+
+.clube{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.clube1 img{
+    width: 40px;
+    height: 45px;
+}
+
+.clube2 img{
+    width: 45px;
+    height: 45px;
+}
+
+.clube p{
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#mensagem {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.celula {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.celula:hover {
+    background-color: #ADD8E6;
+}
+
+.celula img{
+    width: 90px;
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1em; /* Aumentando o tamanho da fonte do botão */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+button:active {
+    background-color: #45a049;
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+/* Responsividade: Ajustes para telas menores */
+
+/* Para dispositivos móveis (menos de 600px) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    #mensagem {
+        font-size: 1em; /* Reduz o tamanho da mensagem */
+    }
+
+    #tabuleiro {
+        grid-template-columns: repeat(3, 80px); /* Diminuir o tamanho das células no tabuleiro */
+        grid-template-rows: repeat(3, 80px);
+        gap: 5px; /* Reduz o espaço entre as células */
+    }
+
+    .celula {
+        width: 80px; /* Ajusta a largura das células */
+        height: 80px; /* Ajusta a altura das células */
+        font-size: 1.5em; /* Ajusta o tamanho da fonte dentro das células */
+    }
+
+    button {
+        padding: 8px 16px; /* Ajusta o tamanho do botão */
+        font-size: 1em; /* Ajusta o tamanho da fonte do botão */
+    }
+}
+
+/* Para dispositivos médios, como tablets (entre 600px e 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 90%; /* Aumenta a largura do container para aproveitar mais espaço */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Ajusta o tamanho do título */
+    }
+
+    #tabuleiro {
+        grid-template-columns: repeat(3, 90px); /* Ajusta o tamanho das células no tabuleiro */
+        grid-template-rows: repeat(3, 90px);
+        gap: 8px; /* Ajusta o espaço entre as células */
+    }
+
+    .celula {
+        width: 90px;
+        height: 90px;
+        font-size: 1.8em; /* Ajusta o tamanho da fonte dentro das células */
+    }
+
+    button {
+        padding: 10px 18px; /* Ajusta o tamanho do botão */
+        font-size: 1.1em; /* Ajusta o tamanho da fonte do botão */
+    }
+}
+  
+  body.modo-noite {
+   
+    color: #000000;
+  }
+  
+
+  .placar-container.modo-noite{
+
+    background-color: aliceblue;
+  }
+
